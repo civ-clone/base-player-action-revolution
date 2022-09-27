@@ -1,6 +1,6 @@
 {
   "name": "@civ-clone/base-player-action-revolution",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "repository": "git@github.com:civ-clone/base-player-action-revolution.git",
   "keywords": [
@@ -12,10 +12,8 @@
   "private": false,
   "scripts": {
     "build": "npm run ts:compile && npm run prettier:format",
-    "prettier:check": "prettier --config .prettierrc '**/*.ts'",
-    "prettier:format": "prettier --config .prettierrc '**/*.ts' --write",
-    "test": "ts-mocha ./tests/*.test.ts",
-    "test:coverage": "c8 ts-mocha ./tests/*.test.ts",
+    "prettier:check": "prettier -c .",
+    "prettier:format": "prettier -w .",
     "ts:compile": "tsc --build tsconfig.json"
   },
   "devDependencies": {
@@ -24,6 +22,7 @@
     "typescript": "^4.0.3"
   },
   "dependencies": {
+    "@civ-clone/core-government": "^0.1.3",
     "@civ-clone/core-player": "^0.1.2"
   }
 }
